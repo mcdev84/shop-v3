@@ -2,6 +2,7 @@ import { TopNav }     from '../../dumbs/TopNav'
 import { Login }      from '../../dumbs/Login'
 import { Cart }       from '../../dumbs/Cart'
 import { LoginModal } from '../../dumbs/LoginModal'
+import { ModalCart }  from '../../ModalCart'
 
 export const Header = () => {
 
@@ -15,6 +16,7 @@ export const Header = () => {
 					<Login/>
 					<Cart/>
 					<LoginModal/>
+					<ModalCart/>
 				</section>
 			</header>
 		</>

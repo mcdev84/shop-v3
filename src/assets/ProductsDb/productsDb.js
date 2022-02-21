@@ -1,8 +1,8 @@
 export const productsDb = [
 	{
-		'id'             : 1,
-		'alimentazione'  : 'elettrica',
-		'brand'          : 'Ariston',
+		id             : 1,
+		alimentazione  : 'elettrica',
+		brand          : 'Ariston',
 		'descrizione'    : 'Matis condens - Condensing Boiler 24 kW Methane - Indoor',
 		'disponibile'    : true,
 		'immagine'       : './boiler.png',

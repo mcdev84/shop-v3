@@ -4,18 +4,15 @@ import { AppContext }   from '../../../App'
 
 export const LoginForm = () => {
 	const [appState, dispatch] = useContext(AppContext)
-	let tempPasswd = ''
-	let tempEmail = ''
-
-	const handleEmail =(e)=> tempEmail = e.target.value
-	const handlePasswd =(e)=> tempEmail = e.target.value
+	let tempEmail
+	let  tempPasswd
 
 	return (
 		<>
 			<Form>
 				<Form.Group className="mb-3" controlId="formBasicEmail">
 					<Form.Label>Email address</Form.Label>
-					<Form.Control type="email" placeholder="Enter email"  onChange = { (e)=> handleEmail(e) }/>
+					<Form.Control type="email" placeholder="Enter email"  onChange = { (e)=> tempEmail= e.target.value }/>
 					<Form.Text className="text-muted">
 						We'll never share your email with anyone else.
 					</Form.Text>
@@ -23,15 +20,15 @@ export const LoginForm = () => {
 
 				<Form.Group className="mb-3" controlId="formBasicPassword">
 					<Form.Label>Password</Form.Label>
-					<Form.Control type="password" placeholder="Password" onChange  = { (e)=> handlePasswd(e)  }/>
+					<Form.Control type="password" placeholder="Password" onChange  = { (e)=> tempPasswd= e.target.value  }/>
 				</Form.Group>
 				<Form.Group className="mb-3" controlId="formBasicCheckbox">
 					<Form.Check type="checkbox" label="Remember"/>
 				</Form.Group>
 				<Button variant="secondary" type="submit"
-				        onClick={ (e) => dispatch({ type: 'LOGIN', payload:  [tempEmail, tempPasswd]  }) }>
+				        onClick={ () => dispatch({ type: 'LOGIN', payload:  [tempEmail, tempPasswd]  }) }>
 					Login
-				</Button> { }
+				</Button>
 				<Button variant="primary" type="submit"
 				        onClick={ () => dispatch({ type: 'SIGN_UP' }) }>
 					Sign Up

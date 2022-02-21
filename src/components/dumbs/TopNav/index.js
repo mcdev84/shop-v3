@@ -1,4 +1,6 @@
 import useWindowSize  from '../../../utils/hooks/useWindowSize'
+import { SimpleList } from '../SimpleList/SimpleList'
+import { Container }  from 'react-bootstrap'
 
 export const TopNav = () => {
 
@@ -6,20 +8,19 @@ export const TopNav = () => {
 
 	return (
 		<>
-			<nav>
+			<Container as={'nav'} className="d-flex align-self-center  justify-content-around">
 				{ width > 431 ?
-				  <ul className="topnavUl">
+				  <SimpleList>
 					  <li><h2>REACT|SHOP</h2></li>
-					  <li><i className="fa-solid fa-user"> </i></li>
-					  <li><a href="#">Contact</a></li>
-					  <li><a href="#">About</a></li>
-				  </ul> :
-				  <ul className="topnavUl">
-					  <li><h2>REACT|SHOP</h2></li>
-					  <li><i className="fa-solid fa-user"> </i></li>
-				  </ul>
+					  <li><h6>Contact</h6></li>
+					  <li><h6>About</h6></li>
+				  </SimpleList>
+				              :
+				  <SimpleList>
+					  <h2>REACT|SHOP</h2>
+				  </SimpleList>
 				}
-			</nav>
+			</Container>
 		</>
 	)
 }

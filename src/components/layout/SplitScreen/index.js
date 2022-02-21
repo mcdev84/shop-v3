@@ -10,11 +10,11 @@ export const SplitScreen = () => {
 	return (
 
 
-			 width>600 ?
+			 width>=600 ?
 			 <>
 				<Container fluid as={ 'section' } className="d-flex">
 					{/*LEFT*/ }
-					<Container fluid as={ 'section' } className="left-panel">
+					<Container fluid as={ 'section' } className="d-flex flex-column left-panel" >
 						<LeftPanel/>
 					</Container>
 					{/*RIGHT*/ }

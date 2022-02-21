@@ -12,25 +12,22 @@ code {
 	monospace;
 }
 
-
-
-.topnavUl {
-	display: flex;
-	align-items: baseline;
-	list-style: none;
-}
-
-li {
-	display: flex;
-	justify-content: space-between;
-	padding: 2%;
+ul {
+list-style:none;
 }
 
 aside {
 	border: solid lightgray 1px;
 	border-radius: 3px;
-	
+	position:fixed;
+	z-index: 10;
 }
+
+.card-img-top {
+	background-color: lightgoldenrodyellow;
+}
+
+
 
 .topnav {
 	display: flex;
@@ -59,7 +56,6 @@ aside {
 	flex-flow: column;
 	flex: 1;
 	margin-top: 2.5%;
-	
 }
 
 .right-panel {
@@ -69,5 +65,27 @@ aside {
 }
 
 .card-container {
+	display:flex;
 	width: 100%;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.compare {
+	display: inline-flex;
+	align-items: baseline;
+	
+}
+
+.fullstar {
+	display: inline-flex;
+	width: clamp(10px, 15px, 20px);
+	align-items: baseline;
+}
+
+.compate-text{
+	text-overflow: ellipsis;
+	width: clamp(10px, 15px, 20px);
+	overflow: hidden;
+
 }
